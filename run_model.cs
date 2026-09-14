@@ -5,12 +5,10 @@ using System.ClientModel.Primitives;
 
 #pragma warning disable OPENAI001
 
-const string deploymentName = "Mistral-Large-3";
-const string endpoint = "https://saulv-9352-resource.services.ai.azure.com/openai/v1";
+const string deploymentName = "";
+const string endpoint = "";
 
-BearerTokenPolicy tokenPolicy = new(
-    new DefaultAzureCredential(),
-    "https://ai.azure.com/.default");
+BearerTokenPolicy tokenPolicy = new(new DefaultAzureCredential(), "https://ai.azure.com/.default");
 
 ChatClient client = new(
     authenticationPolicy: tokenPolicy,
